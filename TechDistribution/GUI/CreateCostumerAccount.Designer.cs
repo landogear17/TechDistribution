@@ -63,6 +63,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.buttonUpdate = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -267,6 +268,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.groupBox2.Controls.Add(this.buttonUpdate);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.textBox2);
@@ -433,6 +435,18 @@
             this.dataGridView2.Size = new System.Drawing.Size(954, 365);
             this.dataGridView2.TabIndex = 28;
             // 
+            // buttonUpdate
+            // 
+            this.buttonUpdate.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.buttonUpdate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonUpdate.Location = new System.Drawing.Point(538, 663);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(209, 75);
+            this.buttonUpdate.TabIndex = 33;
+            this.buttonUpdate.Text = "Update";
+            this.buttonUpdate.UseVisualStyleBackColor = false;
+            this.buttonUpdate.Click += new System.EventHandler(this.button3_Click);
+            // 
             // CreateCostumerAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
@@ -495,5 +509,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button buttonUpdate;
     }
 }

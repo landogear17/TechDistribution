@@ -1,4 +1,4 @@
-﻿namespace TechDistribution.Employee.GUI
+﻿namespace TechDistribution.GUI
 {
     partial class EmployeeLogin
     {
@@ -116,6 +116,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Log in";
             this.button2.UseVisualStyleBackColor = false;
+
             // 
             // button1
             // 

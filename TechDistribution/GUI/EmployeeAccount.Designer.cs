@@ -1,4 +1,4 @@
-﻿namespace TechDistribution.Employee.GUI
+﻿namespace TechDistribution.GUI
 {
     partial class CreateEmployeeAccount
     {
@@ -272,6 +272,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "CreateEmployeeAccount";
             this.Text = "CreateEmployeeAccount";
+            this.Load += new System.EventHandler(this.CreateEmployeeAccount_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

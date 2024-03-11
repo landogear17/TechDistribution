@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TechDistribution.Employee.GUI
+namespace TechDistribution.GUI
 {
-    public partial class EmployeeLogin : Form
+    public partial class CreateCostumerAccount : Form
     {
-        public EmployeeLogin()
+        public CreateCostumerAccount()
         {
             InitializeComponent();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

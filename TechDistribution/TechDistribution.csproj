@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,34 +47,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Customer\GUI\CreateCostumerAccount.cs">
+    <Compile Include="GUI\CreateCostumerAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer\GUI\CreateCostumerAccount.Designer.cs">
+    <Compile Include="GUI\CreateCostumerAccount.Designer.cs">
       <DependentUpon>CreateCostumerAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer\GUI\CustomerLogin.cs">
+    <Compile Include="GUI\CustomerLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer\GUI\CustomerLogin.Designer.cs">
+    <Compile Include="GUI\CustomerLogin.Designer.cs">
       <DependentUpon>CustomerLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmployeeManager\GUI\CreateCostumerAccount.cs">
+    <Compile Include="BLL\Employee.cs" />
+    <Compile Include="DAL\EmployeeDB.cs" />
+    <Compile Include="DAL\UtilityDB.cs" />
+    <Compile Include="GUI\CreateEmployeeAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EmployeeManager\GUI\CreateCostumerAccount.Designer.cs">
-      <DependentUpon>CreateCostumerAccount.cs</DependentUpon>
+    <Compile Include="GUI\CreateEmployeeAccount.Designer.cs">
+      <DependentUpon>CreateEmployeeAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="Employee\GUI\EmployeeAccount.cs">
+    <Compile Include="GUI\EmployeeAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Employee\GUI\EmployeeAccount.Designer.cs">
+    <Compile Include="GUI\EmployeeAccount.Designer.cs">
       <DependentUpon>EmployeeAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="Employee\GUI\EmployeeLogin.cs">
+    <Compile Include="GUI\EmployeeLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Employee\GUI\EmployeeLogin.Designer.cs">
+    <Compile Include="GUI\EmployeeLogin.Designer.cs">
       <DependentUpon>EmployeeLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
@@ -84,19 +88,19 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Customer\GUI\CreateCostumerAccount.resx">
+    <EmbeddedResource Include="GUI\CreateCostumerAccount.resx">
       <DependentUpon>CreateCostumerAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer\GUI\CustomerLogin.resx">
+    <EmbeddedResource Include="GUI\CustomerLogin.resx">
       <DependentUpon>CustomerLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmployeeManager\GUI\CreateCostumerAccount.resx">
-      <DependentUpon>CreateCostumerAccount.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\CreateEmployeeAccount.resx">
+      <DependentUpon>CreateEmployeeAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Employee\GUI\EmployeeAccount.resx">
+    <EmbeddedResource Include="GUI\EmployeeAccount.resx">
       <DependentUpon>EmployeeAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Employee\GUI\EmployeeLogin.resx">
+    <EmbeddedResource Include="GUI\EmployeeLogin.resx">
       <DependentUpon>EmployeeLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
@@ -125,12 +129,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Customer\BLL\" />
-    <Folder Include="Customer\DAL\" />
-    <Folder Include="EmployeeManager\BLL\" />
-    <Folder Include="EmployeeManager\DAL\" />
-    <Folder Include="Employee\BLL\" />
-    <Folder Include="Employee\DAL\" />
     <Folder Include="VALIDATION\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
