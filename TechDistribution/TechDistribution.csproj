@@ -94,6 +94,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VALIDATION\Validator.cs" />
     <EmbeddedResource Include="GUI\CreateCostumerAccount.resx">
       <DependentUpon>CreateCostumerAccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,8 +138,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="VALIDATION\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
