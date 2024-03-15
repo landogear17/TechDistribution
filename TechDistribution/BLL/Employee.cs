@@ -32,13 +32,18 @@ namespace TechDistribution.BLL
 
         public Employee() { }
 
-        public List<Employee> GetEmployees()
+        public static List<Employee> GetEmployees()
         {
-            return EmployeeDB.GetAllRecords();
+            return EmployeeDB.GetEmployeesComplete();
         }
         public void CreateAccountEmployee(Employee employee)
         {
             EmployeeDB.SaveEmployee(employee);
+        }
+
+        public bool AddEmployee(Employee employee)
+        {
+            return EmployeeDB.AddEmployee(employee);
         }
         public Employee SearchEmployee(int employeeId)
         {

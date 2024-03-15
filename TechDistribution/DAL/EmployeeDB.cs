@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using TechDistribution.BLL;
 
 using TechDistribution.DAL;
@@ -12,7 +13,47 @@ namespace TechDistribution.DAL
 {
     public class EmployeeDB
     {
-        /* Trying*/
+        /************************Trying*****************************************/
+
+        private static void RollBack(SqlTransaction transaction)
+        {
+            transaction.Rollback();
+        }
+
+
+        public static bool AddEmployee(Employee emp)
+        {
+            SqlConnection conn = UtilityDB.GetDBConnection();
+
+            try
+            {
+                
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.Connection = conn;
+
+                cmd.CommandText = "INSERT INTO Employees(FirstName, LastName, Email, PhoneNumber, StatusId, JobId) " +
+                                  "VALUES (@FirstName, @LastName, @Email, @PhoneNumber, @StatusId, @JobId);";
+
+                cmd.Parameters.AddWithValue("@FirstName", emp.FirstName);
+                cmd.Parameters.AddWithValue("@LastName", emp.LastName);
+                cmd.Parameters.AddWithValue("@Email", emp.Email);
+                cmd.Parameters.AddWithValue("@PhoneNumber", emp.PhoneNumber);
+                cmd.Parameters.AddWithValue("@StatusId", emp.StatusId);
+                cmd.Parameters.AddWithValue("@JobId", emp.JobId);
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception en)
+            {
+                MessageBox.Show(en.ToString());
+                return false;
+            }
+
+            conn.Close();
+            return true;
+        }
+
 
         public static List<Employee> GetEmployeesComplete()
         {
@@ -79,7 +120,7 @@ namespace TechDistribution.DAL
 
 
 
-
+        /*********************************************************************/
 
         public static List<Employee> GetAllRecords()
         {

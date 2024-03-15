@@ -30,7 +30,20 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.comboBoxJobTitle = new System.Windows.Forms.ComboBox();
+            this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
+            this.textBoxLastName = new System.Windows.Forms.TextBox();
+            this.textBoxFirstName = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Search = new System.Windows.Forms.Button();
             this.listView3 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -42,8 +55,8 @@
             this.SearchByID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.buttonListAll = new System.Windows.Forms.Button();
+            this.listViewAllEmployees = new System.Windows.Forms.ListView();
             this.EmployeeID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.FirstName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.LastName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -51,26 +64,13 @@
             this.PhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Job = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBoxFirstName = new System.Windows.Forms.TextBox();
-            this.textBoxLastName = new System.Windows.Forms.TextBox();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
             this.comboBoxStatus = new System.Windows.Forms.ComboBox();
-            this.comboBoxJobTitle = new System.Windows.Forms.ComboBox();
-            this.buttonAdd = new System.Windows.Forms.Button();
-            this.Search = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -95,6 +95,124 @@
             this.tabPage1.Text = "Add/Update/Delete";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.comboBoxStatus);
+            this.groupBox1.Controls.Add(this.buttonAdd);
+            this.groupBox1.Controls.Add(this.comboBoxJobTitle);
+            this.groupBox1.Controls.Add(this.textBoxPhoneNumber);
+            this.groupBox1.Controls.Add(this.textBoxEmail);
+            this.groupBox1.Controls.Add(this.textBoxLastName);
+            this.groupBox1.Controls.Add(this.textBoxFirstName);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Location = new System.Drawing.Point(8, 6);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(399, 352);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Add Employee";
+            // 
+            // buttonAdd
+            // 
+            this.buttonAdd.Location = new System.Drawing.Point(292, 310);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(101, 35);
+            this.buttonAdd.TabIndex = 12;
+            this.buttonAdd.Text = "Add";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            // 
+            // comboBoxJobTitle
+            // 
+            this.comboBoxJobTitle.FormattingEnabled = true;
+            this.comboBoxJobTitle.Items.AddRange(new object[] {
+            "MIS Manager",
+            "Sales Manager",
+            "Inventory Controller",
+            "Order Clerk"});
+            this.comboBoxJobTitle.Location = new System.Drawing.Point(146, 264);
+            this.comboBoxJobTitle.Name = "comboBoxJobTitle";
+            this.comboBoxJobTitle.Size = new System.Drawing.Size(171, 24);
+            this.comboBoxJobTitle.TabIndex = 11;
+            // 
+            // textBoxPhoneNumber
+            // 
+            this.textBoxPhoneNumber.Location = new System.Drawing.Point(146, 178);
+            this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
+            this.textBoxPhoneNumber.Size = new System.Drawing.Size(171, 22);
+            this.textBoxPhoneNumber.TabIndex = 9;
+            // 
+            // textBoxEmail
+            // 
+            this.textBoxEmail.Location = new System.Drawing.Point(146, 132);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(171, 22);
+            this.textBoxEmail.TabIndex = 8;
+            // 
+            // textBoxLastName
+            // 
+            this.textBoxLastName.Location = new System.Drawing.Point(146, 81);
+            this.textBoxLastName.Name = "textBoxLastName";
+            this.textBoxLastName.Size = new System.Drawing.Size(171, 22);
+            this.textBoxLastName.TabIndex = 7;
+            // 
+            // textBoxFirstName
+            // 
+            this.textBoxFirstName.Location = new System.Drawing.Point(146, 35);
+            this.textBoxFirstName.Name = "textBoxFirstName";
+            this.textBoxFirstName.Size = new System.Drawing.Size(171, 22);
+            this.textBoxFirstName.TabIndex = 6;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(22, 272);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(59, 16);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Job Title";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(22, 181);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(97, 16);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Phone Number";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(22, 135);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 16);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Email";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(22, 84);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 16);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Last Name";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 38);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 16);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "First Name";
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.Search);
@@ -108,6 +226,16 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Search";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // Search
+            // 
+            this.Search.Location = new System.Drawing.Point(351, 28);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(94, 32);
+            this.Search.TabIndex = 4;
+            this.Search.Text = "Search";
+            this.Search.UseVisualStyleBackColor = true;
+            this.Search.Click += new System.EventHandler(this.Search_Click);
             // 
             // listView3
             // 
@@ -181,8 +309,8 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.button1);
-            this.tabPage3.Controls.Add(this.listView1);
+            this.tabPage3.Controls.Add(this.buttonListAll);
+            this.tabPage3.Controls.Add(this.listViewAllEmployees);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -191,18 +319,19 @@
             this.tabPage3.Text = "Employee List";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // buttonListAll
             // 
-            this.button1.Location = new System.Drawing.Point(760, 24);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 43);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "List All Employees";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonListAll.Location = new System.Drawing.Point(760, 24);
+            this.buttonListAll.Name = "buttonListAll";
+            this.buttonListAll.Size = new System.Drawing.Size(144, 43);
+            this.buttonListAll.TabIndex = 2;
+            this.buttonListAll.Text = "List All Employees";
+            this.buttonListAll.UseVisualStyleBackColor = true;
+            this.buttonListAll.Click += new System.EventHandler(this.buttonListAll_Click);
             // 
-            // listView1
+            // listViewAllEmployees
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewAllEmployees.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.EmployeeID,
             this.FirstName,
             this.LastName,
@@ -210,13 +339,13 @@
             this.PhoneNumber,
             this.Status,
             this.Job});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(6, 85);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(896, 446);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listViewAllEmployees.HideSelection = false;
+            this.listViewAllEmployees.Location = new System.Drawing.Point(6, 85);
+            this.listViewAllEmployees.Name = "listViewAllEmployees";
+            this.listViewAllEmployees.Size = new System.Drawing.Size(896, 446);
+            this.listViewAllEmployees.TabIndex = 1;
+            this.listViewAllEmployees.UseCompatibleStateImageBehavior = false;
+            this.listViewAllEmployees.View = System.Windows.Forms.View.Details;
             // 
             // EmployeeID
             // 
@@ -253,64 +382,6 @@
             this.Job.Text = "Job";
             this.Job.Width = 120;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.buttonAdd);
-            this.groupBox1.Controls.Add(this.comboBoxJobTitle);
-            this.groupBox1.Controls.Add(this.comboBoxStatus);
-            this.groupBox1.Controls.Add(this.textBoxPhoneNumber);
-            this.groupBox1.Controls.Add(this.textBoxEmail);
-            this.groupBox1.Controls.Add(this.textBoxLastName);
-            this.groupBox1.Controls.Add(this.textBoxFirstName);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(8, 6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(399, 352);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Add Employee";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 16);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "First Name";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 84);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 16);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Last Name";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 135);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 16);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Email";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(22, 181);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 16);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Phone Number";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -320,43 +391,6 @@
             this.label6.TabIndex = 4;
             this.label6.Text = "Status";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(22, 272);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 16);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Job Title";
-            // 
-            // textBoxFirstName
-            // 
-            this.textBoxFirstName.Location = new System.Drawing.Point(146, 35);
-            this.textBoxFirstName.Name = "textBoxFirstName";
-            this.textBoxFirstName.Size = new System.Drawing.Size(171, 22);
-            this.textBoxFirstName.TabIndex = 6;
-            // 
-            // textBoxLastName
-            // 
-            this.textBoxLastName.Location = new System.Drawing.Point(146, 81);
-            this.textBoxLastName.Name = "textBoxLastName";
-            this.textBoxLastName.Size = new System.Drawing.Size(171, 22);
-            this.textBoxLastName.TabIndex = 7;
-            // 
-            // textBoxEmail
-            // 
-            this.textBoxEmail.Location = new System.Drawing.Point(146, 132);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(171, 22);
-            this.textBoxEmail.TabIndex = 8;
-            // 
-            // textBoxPhoneNumber
-            // 
-            this.textBoxPhoneNumber.Location = new System.Drawing.Point(146, 178);
-            this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
-            this.textBoxPhoneNumber.Size = new System.Drawing.Size(171, 22);
-            this.textBoxPhoneNumber.TabIndex = 9;
-            // 
             // comboBoxStatus
             // 
             this.comboBoxStatus.FormattingEnabled = true;
@@ -364,42 +398,10 @@
             "Part-Time",
             "Full-Time",
             "Contracted"});
-            this.comboBoxStatus.Location = new System.Drawing.Point(146, 217);
+            this.comboBoxStatus.Location = new System.Drawing.Point(146, 223);
             this.comboBoxStatus.Name = "comboBoxStatus";
             this.comboBoxStatus.Size = new System.Drawing.Size(171, 24);
-            this.comboBoxStatus.TabIndex = 10;
-            // 
-            // comboBoxJobTitle
-            // 
-            this.comboBoxJobTitle.FormattingEnabled = true;
-            this.comboBoxJobTitle.Items.AddRange(new object[] {
-            "MIS Manager",
-            "Sales Manager",
-            "Inventory Controller",
-            "Order Clerk"});
-            this.comboBoxJobTitle.Location = new System.Drawing.Point(146, 264);
-            this.comboBoxJobTitle.Name = "comboBoxJobTitle";
-            this.comboBoxJobTitle.Size = new System.Drawing.Size(171, 24);
-            this.comboBoxJobTitle.TabIndex = 11;
-            // 
-            // buttonAdd
-            // 
-            this.buttonAdd.Location = new System.Drawing.Point(292, 310);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(101, 35);
-            this.buttonAdd.TabIndex = 12;
-            this.buttonAdd.Text = "Add";
-            this.buttonAdd.UseVisualStyleBackColor = true;
-            // 
-            // Search
-            // 
-            this.Search.Location = new System.Drawing.Point(351, 28);
-            this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(94, 32);
-            this.Search.TabIndex = 4;
-            this.Search.Text = "Search";
-            this.Search.UseVisualStyleBackColor = true;
-            this.Search.Click += new System.EventHandler(this.Search_Click);
+            this.comboBoxStatus.TabIndex = 13;
             // 
             // EmployeeManagament
             // 
@@ -411,11 +413,11 @@
             this.Text = "EmployeeManagament";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -436,8 +438,8 @@
         private System.Windows.Forms.TextBox SearchByID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button buttonListAll;
+        private System.Windows.Forms.ListView listViewAllEmployees;
         private System.Windows.Forms.ColumnHeader EmployeeID;
         private System.Windows.Forms.ColumnHeader FirstName;
         private System.Windows.Forms.ColumnHeader LastName;
@@ -448,17 +450,17 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.ComboBox comboBoxJobTitle;
-        private System.Windows.Forms.ComboBox comboBoxStatus;
         private System.Windows.Forms.TextBox textBoxPhoneNumber;
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.TextBox textBoxLastName;
         private System.Windows.Forms.TextBox textBoxFirstName;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Search;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBoxStatus;
     }
 }
