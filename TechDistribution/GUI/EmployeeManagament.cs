@@ -14,8 +14,6 @@ using System.Windows.Forms;
 
 namespace TechDistribution.GUI
 {
-
-    
     public partial class EmployeeManagament : Form
     {
 
@@ -24,12 +22,26 @@ namespace TechDistribution.GUI
             InitializeComponent();
             comboBoxStatus.SelectedIndex = 0;
             comboBoxJobTitle.SelectedIndex = 0;
+            comboBoxSearchBy.SelectedIndex = 0;
         }
 
-        private void Search_Click(object sender, EventArgs e)
+        private void clearFields()
+        {
+            textBoxSearchEmployeeID.Clear();
+            textBoxSearchFirstName.Clear();
+            textBoxSearchLastName.Clear();
+            textBoxSearchEmail.Clear();
+            textBoxSearchPhoneNumber.Clear();
+            comboBoxSearchStatus.SelectedIndex = -1;
+            comboBoxSearchJobTitle.SelectedIndex = -1;
+        }
+
+        private void SearchByID()
         {
 
-            string id = SearchByID.Text.Trim();
+            clearFields();
+
+            string id = textBoxSearchBy.Text.Trim();
 
             if (!Validator.IsValidID(id))
             {
@@ -49,7 +61,7 @@ namespace TechDistribution.GUI
 
             emp = EmployeeDB.GetEmployeeByID(realId);
 
-            listView3.Items.Clear();
+            listViewSearch.Items.Clear();
             ListViewItem row = new ListViewItem(emp.EmployeeId.ToString());
             row.SubItems.Add(emp.FirstName);
             row.SubItems.Add(emp.LastName);
@@ -58,7 +70,58 @@ namespace TechDistribution.GUI
             row.SubItems.Add(emp.StatusDesc);
             row.SubItems.Add(emp.JobTitle);
 
-            listView3.Items.Add(row);
+            listViewSearch.Items.Add(row);
+
+            textBoxSearchEmployeeID.Text = emp.EmployeeId.ToString();
+            textBoxSearchFirstName.Text = emp.FirstName;
+            textBoxSearchLastName.Text = emp.LastName;
+            textBoxSearchEmail.Text = emp.Email;
+            textBoxSearchPhoneNumber.Text = emp.PhoneNumber;
+
+            int idx = comboBoxSearchStatus.Items.IndexOf(emp.StatusDesc);
+
+            comboBoxSearchStatus.SelectedIndex = idx;
+
+            idx = comboBoxJobTitle.Items.IndexOf(emp.JobTitle);
+
+            comboBoxSearchJobTitle.SelectedIndex = idx;
+
+            //comboBoxSearchStatus.SelectedText = emp.StatusDesc;
+            //comboBoxSearchJobTitle.SelectedText = emp.JobTitle;
+
+        }
+
+        private void SearchByFirstName()
+        {
+            string text = textBoxSearchBy.Text;
+            if (!Validator.IsValidText(text))
+            {
+                MessageBox.Show("The input you wrote is an incorrect format, try again");
+                return;
+            }
+
+            List<Employee> employees = Employee.SearchByFirstName(text);
+
+            if(employees.Count == 0)
+            {
+                MessageBox.Show("That First Name is not in our records");
+                return;
+            }
+
+            clearFields();
+
+            foreach (Employee emp in employees)
+            {
+                ListViewItem item = new ListViewItem(emp.EmployeeId.ToString());
+                item.SubItems.Add(emp.FirstName);
+                item.SubItems.Add(emp.LastName);
+                item.SubItems.Add(emp.Email);
+                item.SubItems.Add(emp.PhoneNumber);
+                item.SubItems.Add(emp.StatusDesc);
+                item.SubItems.Add(emp.JobTitle);
+
+                listViewSearch.Items.Add(item);
+            }
 
         }
 
@@ -68,7 +131,7 @@ namespace TechDistribution.GUI
 
             employees = Employee.GetEmployees();
 
-            listView3.Items.Clear();
+            listViewAllEmployees.Items.Clear();
 
             foreach (Employee emp in employees)
             {
@@ -82,6 +145,7 @@ namespace TechDistribution.GUI
 
                 listViewAllEmployees.Items.Add(row);
             }
+
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
@@ -179,6 +243,27 @@ namespace TechDistribution.GUI
         private int jobTitlePK(int idx)
         {
             return idx + 1;
+        }
+
+        private void ButtonSearch_Click(object sender, EventArgs e)
+        {
+            int idx = comboBoxSearchBy.SelectedIndex;
+
+            switch (idx)
+            {
+                case 0:     //Search By ID
+                    SearchByID();
+                    break;
+                case 1:     //Search By FirstName
+                    SearchByFirstName();
+                    break;
+                case 2:     //Search By LastName
+                    break;
+                case 3:     // Search By Email
+                    break;
+                case 4:     // Search By PhoneNumber
+                    break;
+            }
         }
     }
 }

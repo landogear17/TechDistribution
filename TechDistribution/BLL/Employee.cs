@@ -65,6 +65,14 @@ namespace TechDistribution.BLL
             return existing;
         }
 
+        public static List<Employee> SearchByFirstName(string FirstName)
+        {
+            List<Employee> employees = EmployeeDB.GetEmployeesComplete();
+            var empFiltered = employees.Where(x => x.firstName == FirstName).ToList();
+
+            return empFiltered;
+        }
+
 
     }
 }
