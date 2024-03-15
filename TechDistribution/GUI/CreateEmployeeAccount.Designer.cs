@@ -78,10 +78,10 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(89, 16);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.groupBox1.Location = new System.Drawing.Point(90, 20);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(1);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(1);
             this.groupBox1.Size = new System.Drawing.Size(448, 578);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -103,7 +103,7 @@
             // textBoxEmployeeId
             // 
             this.textBoxEmployeeId.Location = new System.Drawing.Point(172, 47);
-            this.textBoxEmployeeId.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxEmployeeId.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxEmployeeId.Name = "textBoxEmployeeId";
             this.textBoxEmployeeId.Size = new System.Drawing.Size(233, 30);
             this.textBoxEmployeeId.TabIndex = 19;
@@ -114,7 +114,7 @@
             this.buttonCreateUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCreateUser.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonCreateUser.Location = new System.Drawing.Point(137, 513);
-            this.buttonCreateUser.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.buttonCreateUser.Margin = new System.Windows.Forms.Padding(1);
             this.buttonCreateUser.Name = "buttonCreateUser";
             this.buttonCreateUser.Size = new System.Drawing.Size(173, 45);
             this.buttonCreateUser.TabIndex = 16;
@@ -137,7 +137,7 @@
             // textBoxLastName
             // 
             this.textBoxLastName.Location = new System.Drawing.Point(172, 150);
-            this.textBoxLastName.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxLastName.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxLastName.Name = "textBoxLastName";
             this.textBoxLastName.Size = new System.Drawing.Size(233, 30);
             this.textBoxLastName.TabIndex = 17;
@@ -145,7 +145,7 @@
             // textBoxPassword2
             // 
             this.textBoxPassword2.Location = new System.Drawing.Point(221, 464);
-            this.textBoxPassword2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxPassword2.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxPassword2.Name = "textBoxPassword2";
             this.textBoxPassword2.Size = new System.Drawing.Size(184, 30);
             this.textBoxPassword2.TabIndex = 15;
@@ -153,7 +153,7 @@
             // textBoxPassword
             // 
             this.textBoxPassword.Location = new System.Drawing.Point(221, 410);
-            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(184, 30);
             this.textBoxPassword.TabIndex = 14;
@@ -185,7 +185,7 @@
             // textBoxJobId
             // 
             this.textBoxJobId.Location = new System.Drawing.Point(221, 355);
-            this.textBoxJobId.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxJobId.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxJobId.Name = "textBoxJobId";
             this.textBoxJobId.Size = new System.Drawing.Size(182, 30);
             this.textBoxJobId.TabIndex = 11;
@@ -193,7 +193,7 @@
             // textBoxStatusId
             // 
             this.textBoxStatusId.Location = new System.Drawing.Point(221, 301);
-            this.textBoxStatusId.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxStatusId.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxStatusId.Name = "textBoxStatusId";
             this.textBoxStatusId.Size = new System.Drawing.Size(182, 30);
             this.textBoxStatusId.TabIndex = 10;
@@ -201,7 +201,7 @@
             // textBoxPhoneNumber
             // 
             this.textBoxPhoneNumber.Location = new System.Drawing.Point(221, 252);
-            this.textBoxPhoneNumber.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxPhoneNumber.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
             this.textBoxPhoneNumber.Size = new System.Drawing.Size(184, 30);
             this.textBoxPhoneNumber.TabIndex = 9;
@@ -209,7 +209,7 @@
             // textBoxEmail
             // 
             this.textBoxEmail.Location = new System.Drawing.Point(172, 202);
-            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(233, 30);
             this.textBoxEmail.TabIndex = 8;
@@ -217,7 +217,7 @@
             // textBoxFirstName
             // 
             this.textBoxFirstName.Location = new System.Drawing.Point(172, 96);
-            this.textBoxFirstName.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxFirstName.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxFirstName.Name = "textBoxFirstName";
             this.textBoxFirstName.Size = new System.Drawing.Size(233, 30);
             this.textBoxFirstName.TabIndex = 6;
@@ -299,7 +299,7 @@
             this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.buttonExit.Location = new System.Drawing.Point(457, 609);
-            this.buttonExit.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(1);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(142, 43);
             this.buttonExit.TabIndex = 17;
@@ -316,7 +316,7 @@
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "CreateAccount";
             this.Text = "CreateAccount";
             this.groupBox1.ResumeLayout(false);

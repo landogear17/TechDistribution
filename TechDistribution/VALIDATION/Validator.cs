@@ -9,6 +9,13 @@ namespace TechDistribution.VALIDATION
 {
     public class Validator
     {
+
+        public static bool IsValidID(string id)
+        {
+            if (!Regex.IsMatch(id, @"^\d{5}$"))
+                return false;
+            return true;
+        }
         public static bool IsValidPhoneNumber(string phoneNumber)
         {
             if (!Regex.IsMatch(phoneNumber, @"^\(\d{3}\)\d{3}-\d{4}$"))

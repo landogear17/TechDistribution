@@ -86,6 +86,12 @@
     <Compile Include="GUI\EmployeeLogin.Designer.cs">
       <DependentUpon>EmployeeLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\EmployeeManagament.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EmployeeManagament.Designer.cs">
+      <DependentUpon>EmployeeManagament.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\EmployeeLogin.resx">
       <DependentUpon>EmployeeLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EmployeeManagament.resx">
+      <DependentUpon>EmployeeManagament.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TechDistribution.GUI;
 
 namespace TechDistribution
 {
@@ -16,7 +17,7 @@ namespace TechDistribution
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CustomerLogin());
+            Application.Run(new EmployeeManagament());
         }
     }
 }
