@@ -16,7 +16,9 @@ namespace TechDistribution.BLL
         private string email;
         private string phoneNumber;
         private int statusId;
+        private string statusDesc;
         private int jobId;
+        private string jobTitle;
 
         public int EmployeeId { get => employeeId; set => employeeId = value; }
         public string FirstName { get => firstName; set => firstName = value; }
@@ -24,7 +26,9 @@ namespace TechDistribution.BLL
         public string Email { get => email; set => email = value; }
         public string PhoneNumber { get => phoneNumber; set => phoneNumber = value; }
         public int StatusId { get => statusId; set => statusId = value; }
+        public string StatusDesc { get => statusDesc; set => statusDesc = value; }
         public int JobId { get => jobId; set => jobId = value; }
+        public string JobTitle { get => jobTitle; set => jobTitle = value; }
 
         public Employee() { }
 
@@ -50,7 +54,7 @@ namespace TechDistribution.BLL
             EmployeeDB.DeleteEmployee(employee.employeeId);
         }
 
-        public bool IsAExistingEmployee(int employeeId)
+        public static bool IsAExistingEmployee(int employeeId)
         {
             bool existing = EmployeeDB.IsAnExistingEmployee(employeeId);
             return existing;

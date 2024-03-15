@@ -74,11 +74,23 @@
     <Compile Include="GUI\EmployeeAccount.Designer.cs">
       <DependentUpon>EmployeeAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\EmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EmployeeForm.Designer.cs">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\EmployeeLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\EmployeeLogin.Designer.cs">
       <DependentUpon>EmployeeLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EmployeeManagament.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EmployeeManagament.Designer.cs">
+      <DependentUpon>EmployeeManagament.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -88,6 +100,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VALIDATION\Validator.cs" />
     <EmbeddedResource Include="GUI\CreateCostumerAccount.resx">
       <DependentUpon>CreateCostumerAccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,8 +113,14 @@
     <EmbeddedResource Include="GUI\EmployeeAccount.resx">
       <DependentUpon>EmployeeAccount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EmployeeForm.resx">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\EmployeeLogin.resx">
       <DependentUpon>EmployeeLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EmployeeManagament.resx">
+      <DependentUpon>EmployeeManagament.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -128,8 +147,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="VALIDATION\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

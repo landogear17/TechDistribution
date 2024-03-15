@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label1 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.buttonEmployee = new System.Windows.Forms.Button();
-            this.buttonSupplier = new System.Windows.Forms.Button();
             this.buttonCustomer = new System.Windows.Forms.Button();
+            this.buttonSupplier = new System.Windows.Forms.Button();
+            this.buttonEmployee = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -44,9 +44,11 @@
             this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(9, 12);
+            this.groupBox1.Location = new System.Drawing.Point(4, 5);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(2444, 146);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.groupBox1.Size = new System.Drawing.Size(1029, 63);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -54,9 +56,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(666, 40);
+            this.label1.Location = new System.Drawing.Point(280, 17);
+            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1021, 82);
+            this.label1.Size = new System.Drawing.Size(434, 36);
             this.label1.TabIndex = 1;
             this.label1.Text = "HI-TECH DISTRIBUTION INC";
             // 
@@ -66,11 +69,37 @@
             this.groupBox2.Controls.Add(this.buttonCustomer);
             this.groupBox2.Controls.Add(this.buttonSupplier);
             this.groupBox2.Controls.Add(this.buttonEmployee);
-            this.groupBox2.Location = new System.Drawing.Point(117, 415);
+            this.groupBox2.Location = new System.Drawing.Point(49, 179);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(2157, 675);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.groupBox2.Size = new System.Drawing.Size(908, 292);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
+            // 
+            // buttonCustomer
+            // 
+            this.buttonCustomer.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.buttonCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCustomer.Location = new System.Drawing.Point(573, 108);
+            this.buttonCustomer.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.buttonCustomer.Name = "buttonCustomer";
+            this.buttonCustomer.Size = new System.Drawing.Size(209, 74);
+            this.buttonCustomer.TabIndex = 2;
+            this.buttonCustomer.Text = "Customer";
+            this.buttonCustomer.UseVisualStyleBackColor = false;
+            // 
+            // buttonSupplier
+            // 
+            this.buttonSupplier.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.buttonSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSupplier.Location = new System.Drawing.Point(311, 108);
+            this.buttonSupplier.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.buttonSupplier.Name = "buttonSupplier";
+            this.buttonSupplier.Size = new System.Drawing.Size(209, 74);
+            this.buttonSupplier.TabIndex = 1;
+            this.buttonSupplier.Text = "Supplier";
+            this.buttonSupplier.UseVisualStyleBackColor = false;
             // 
             // buttonEmployee
             // 
@@ -78,45 +107,25 @@
             this.buttonEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEmployee.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.buttonEmployee.Location = new System.Drawing.Point(138, 249);
+            this.buttonEmployee.Location = new System.Drawing.Point(58, 108);
+            this.buttonEmployee.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.buttonEmployee.Name = "buttonEmployee";
-            this.buttonEmployee.Size = new System.Drawing.Size(496, 170);
+            this.buttonEmployee.Size = new System.Drawing.Size(209, 74);
             this.buttonEmployee.TabIndex = 0;
             this.buttonEmployee.Text = "Employee";
             this.buttonEmployee.UseVisualStyleBackColor = false;
             // 
-            // buttonSupplier
-            // 
-            this.buttonSupplier.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.buttonSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSupplier.Location = new System.Drawing.Point(738, 249);
-            this.buttonSupplier.Name = "buttonSupplier";
-            this.buttonSupplier.Size = new System.Drawing.Size(496, 170);
-            this.buttonSupplier.TabIndex = 1;
-            this.buttonSupplier.Text = "Supplier";
-            this.buttonSupplier.UseVisualStyleBackColor = false;
-            // 
-            // buttonCustomer
-            // 
-            this.buttonCustomer.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.buttonCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCustomer.Location = new System.Drawing.Point(1361, 249);
-            this.buttonCustomer.Name = "buttonCustomer";
-            this.buttonCustomer.Size = new System.Drawing.Size(496, 170);
-            this.buttonCustomer.TabIndex = 2;
-            this.buttonCustomer.Text = "Customer";
-            this.buttonCustomer.UseVisualStyleBackColor = false;
-            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.ClientSize = new System.Drawing.Size(2465, 1517);
+            this.ClientSize = new System.Drawing.Size(1046, 601);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.groupBox1.ResumeLayout(false);

@@ -12,6 +12,75 @@ namespace TechDistribution.DAL
 {
     public class EmployeeDB
     {
+        /* Trying*/
+
+        public static List<Employee> GetEmployeesComplete()
+        {
+            List<Employee> listE = new List<Employee>();
+            SqlConnection conn = UtilityDB.GetDBConnection();
+
+            SqlCommand cmd = new SqlCommand("SELECT EmployeeId, FirstName, LastName, Email, PhoneNumber,e.StatusId, StatusDesc,e.JobId, JobTitle\r\nFROM Employees e, Status s, Jobs j\r\nWHERE e.StatusId = s.StatusId AND\r\ne.JobId = j.JobId;", conn);
+            SqlDataReader reader = cmd.ExecuteReader();
+            Employee emp;
+
+            while (reader.Read())
+            {
+                emp = new Employee();
+                emp.EmployeeId = Convert.ToInt32(reader["EmployeeId"]);
+                emp.FirstName = reader["FirstName"].ToString();
+                emp.LastName = reader["LastName"].ToString();
+                emp.Email = reader["Email"].ToString();
+                emp.PhoneNumber = reader["PhoneNumber"].ToString();
+                emp.StatusId = Convert.ToInt32(reader["StatusId"]);
+                emp.StatusDesc = reader["StatusDesc"].ToString();
+                emp.JobId = Convert.ToInt32(reader["JobId"]);
+                emp.JobTitle = reader["JobTitle"].ToString();
+                listE.Add(emp);
+            }
+            conn.Close();
+            return listE;
+        }
+
+        public static Employee GetEmployeeByID(int id)
+        {
+            SqlConnection conn = UtilityDB.GetDBConnection();
+            try
+            {
+                SqlCommand cmdSearch = new SqlCommand();
+                cmdSearch.Connection = conn;
+                cmdSearch.CommandText = "SELECT EmployeeId, FirstName, LastName, Email, PhoneNumber, StatusDesc, JobTitle FROM Employees e, Status s, Jobs j " +
+                                        "WHERE EmployeeId = @EmployeeId AND e.StatusId = s.StatusId AND e.JobId = j.JobId;";
+                cmdSearch.Parameters.AddWithValue("@EmployeeId", id);
+                SqlDataReader reader = cmdSearch.ExecuteReader();
+
+                reader.Read();
+                Employee emp = new Employee();
+                emp.EmployeeId = Convert.ToInt32(reader["EmployeeId"]);
+                emp.FirstName = reader["FirstName"].ToString();
+                emp.LastName = reader["LastName"].ToString();
+                emp.Email = reader["Email"].ToString();
+                emp.PhoneNumber = reader["PhoneNumber"].ToString();
+                emp.StatusDesc = reader["StatusDesc"].ToString();
+                emp.JobTitle = reader["JobTitle"].ToString();
+
+                return emp;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
+
+
+
+
         public static List<Employee> GetAllRecords()
         {
             List<Employee> listE = new List<Employee>();
