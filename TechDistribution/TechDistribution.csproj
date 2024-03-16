@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\User.cs" />
+    <Compile Include="DAL\UserDB.cs" />
     <Compile Include="GUI\CreateCostumerAccount.cs">
       <SubType>Form</SubType>
     </Compile>
