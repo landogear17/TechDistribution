@@ -31,5 +31,11 @@ namespace TechDistribution.VALIDATION
                 return false;
             return true;
         }
+        public static bool IsValidEmail(string email)
+        {
+            if (!Regex.IsMatch(email, @"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"))
+                return false;
+            return true;
+        }
     }
 }
