@@ -50,13 +50,13 @@ namespace TechDistribution.BLL
             return EmployeeDB.SearchEmployee(employeeId);
         }
 
-        public void ModifyEmployee(Employee employee)
+        public static void ModifyEmployee(Employee employee)
         {
             EmployeeDB.modifyEmployee(employee);
         }
-        public void DeleteEmployee(Employee employee)
+        public static void DeleteEmployee(int empId)
         {
-            EmployeeDB.DeleteEmployee(employee.employeeId);
+            EmployeeDB.DeleteEmployee(empId);
         }
 
         public static bool IsAExistingEmployee(int employeeId)
@@ -68,9 +68,35 @@ namespace TechDistribution.BLL
         public static List<Employee> SearchByFirstName(string FirstName)
         {
             List<Employee> employees = EmployeeDB.GetEmployeesComplete();
-            var empFiltered = employees.Where(x => x.firstName == FirstName).ToList();
+            var empFiltered = employees.Where(x => x.firstName.ToLower() == FirstName.ToLower()).ToList();
 
             return empFiltered;
+        }
+
+        public static List<Employee> SearchByLastName(string LastName)
+        {
+            List<Employee> empFiltered = EmployeeDB.GetEmployeesComplete().Where(x => x.lastName.ToLower() == LastName.ToLower()).ToList();
+
+            return empFiltered;
+
+        }
+
+        public static List<Employee> SearchByEmail(string Email)
+        {
+            var empFiltered = EmployeeDB.GetEmployeesComplete().Where(x => x.email == Email).ToList();
+            return empFiltered;
+        }
+
+        public static List<Employee> SearchByPhoneNumber(string PhoneNumber)
+        {
+            var empFiltered = EmployeeDB.GetEmployeesComplete().Where(x => x.phoneNumber == PhoneNumber).ToList();
+
+            return empFiltered;
+        }
+
+        public static void UpdateEmployee(Employee emp)
+        {
+            EmployeeDB.UpdateEmployee(emp);
         }
 
 

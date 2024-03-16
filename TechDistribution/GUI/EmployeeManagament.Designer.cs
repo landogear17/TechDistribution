@@ -69,7 +69,7 @@
             this.textBoxSearchBy = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonUpdate = new System.Windows.Forms.Button();
             this.comboBoxSearchJobTitle = new System.Windows.Forms.ComboBox();
             this.textBoxSearchEmail = new System.Windows.Forms.TextBox();
             this.textBoxSearchLastName = new System.Windows.Forms.TextBox();
@@ -84,7 +84,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.textBoxSearchPhoneNumber = new System.Windows.Forms.TextBox();
             this.comboBoxSearchStatus = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonDelete = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -422,6 +422,7 @@
             this.comboBoxSearchBy.Name = "comboBoxSearchBy";
             this.comboBoxSearchBy.Size = new System.Drawing.Size(165, 24);
             this.comboBoxSearchBy.TabIndex = 9;
+            this.comboBoxSearchBy.SelectedIndexChanged += new System.EventHandler(this.comboBoxSearchBy_SelectedIndexChanged);
             // 
             // ButtonSearch
             // 
@@ -452,11 +453,11 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button2);
+            this.groupBox3.Controls.Add(this.buttonDelete);
             this.groupBox3.Controls.Add(this.textBoxSearchEmployeeID);
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.comboBoxSearchStatus);
-            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.buttonUpdate);
             this.groupBox3.Controls.Add(this.comboBoxSearchJobTitle);
             this.groupBox3.Controls.Add(this.textBoxSearchPhoneNumber);
             this.groupBox3.Controls.Add(this.textBoxSearchEmail);
@@ -475,14 +476,15 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Update - Delete";
             // 
-            // button1
+            // buttonUpdate
             // 
-            this.button1.Location = new System.Drawing.Point(757, 34);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 35);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Update";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Location = new System.Drawing.Point(757, 34);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(101, 35);
+            this.buttonUpdate.TabIndex = 12;
+            this.buttonUpdate.Text = "Update";
+            this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // comboBoxSearchJobTitle
             // 
@@ -608,14 +610,15 @@
             this.comboBoxSearchStatus.Size = new System.Drawing.Size(171, 24);
             this.comboBoxSearchStatus.TabIndex = 13;
             // 
-            // button2
+            // buttonDelete
             // 
-            this.button2.Location = new System.Drawing.Point(757, 89);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 35);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonDelete.Location = new System.Drawing.Point(757, 89);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(101, 35);
+            this.buttonDelete.TabIndex = 16;
+            this.buttonDelete.Text = "Delete";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // EmployeeManagament
             // 
@@ -677,11 +680,11 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBoxStatus;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.TextBox textBoxSearchEmployeeID;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox comboBoxSearchStatus;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.ComboBox comboBoxSearchJobTitle;
         private System.Windows.Forms.TextBox textBoxSearchPhoneNumber;
         private System.Windows.Forms.TextBox textBoxSearchEmail;

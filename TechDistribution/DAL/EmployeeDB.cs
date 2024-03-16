@@ -118,6 +118,42 @@ namespace TechDistribution.DAL
 
         }
 
+        public static void UpdateEmployee(Employee emp)
+        {
+            using (SqlConnection conn = UtilityDB.GetDBConnection())
+            {
+                
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+
+                cmd.CommandText = "UPDATE Employees " +
+                                  "SET FirstName = @FirstName, " +
+                                  "LastName = @LastName, " +
+                                  "Email = @Email, " +
+                                  "PhoneNumber = @PhoneNumber, " +
+                                  "StatusId = @StatusId, " +
+                                  "JobId = @JobId " +
+                                  "WHERE EmployeeId = @EmployeeId;";
+
+                cmd.Parameters.AddWithValue("@FirstName", emp.FirstName);
+                cmd.Parameters.AddWithValue("@LastName", emp.LastName);
+                cmd.Parameters.AddWithValue("@Email", emp.Email);
+                cmd.Parameters.AddWithValue("@PhoneNumber", emp.PhoneNumber);
+                cmd.Parameters.AddWithValue("@StatusId", emp.StatusId);
+                cmd.Parameters.AddWithValue("@JobId", emp.JobId);
+                cmd.Parameters.AddWithValue("@EmployeeId", emp.EmployeeId);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.ToString());
+                    return;
+                }
+            }
+        }
+
 
 
         /*********************************************************************/
